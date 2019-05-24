@@ -1,21 +1,23 @@
 //Question #1. Write the function printInt(n) taking one parameter n and print all natural numbers from 1 to n in console.
-
- function printInt(n) {
-    for(var i=1;1<=n;i++){
-        console.log(i);
-    }
-    }
+function printInt(n) {
+  for(var i=1;i<=n;i++){
+    console.log(i);
+  }
+}
 // printInt(10);
 // printInt(13);
 
-
 //Question #2. Write the function printIntRev(n) taking one parameter n and  print all natural numbers in reverse in console (from n to 1).
 
- function printIntRev(n) {
-    for(var x=n;x>=i;x--){
-        console.log(x);
-    }
+ 
+// printIntRev(22);
+
+function printIntRev(n) {
+  for(var x=n;x>=1;x--){
+    console.log(x);
+  }
 }
+
 // printIntRev(22);
 
 //Question # 3 Write the function checkInput(x) taking one parameter x 
@@ -78,15 +80,16 @@ var words = str.split(" ");
 //Answer
 var solution = "";
 
-//find the 1st character in each word
-for(var i=0;i<words.length;i++){
-var upperWord = words[i].replace(words[i][0].toUpperCase());
-solution += "  " + upperWord;
-}
-return solution.slice(1);
-}
-console.log(letterCapitalize("you cannot find the answer online"));
 
+  // find the first character in each word
+  for(var i=0;i<words.length;i++){
+    var upperWord = words[i].replace(words[i][0], words[i][0].toUpperCase());
+    solution += " " + upperWord;
+  }
+  return solution.slice(1);
+}
+
+// console.log(letterCapitalize("you cannnot find answer online"));
 
 //Question # 6 Write the function simpleReverse(str) taking
 //a string and return the string in reversed order. 
@@ -143,7 +146,7 @@ var hour =parseInt(num/60);
 var minutes= num % 60
 //combine the answer
 return hour + ":" + minutes}
-}
+
 console.log(timeConvert(123));
 console.log(timeConvert(59));
 
@@ -200,12 +203,13 @@ function selfDividingNumbers(left, right){
   console.log(selfDividingNumbers(1,22));
   
 
-//Question 11 11. Write the function moveZeros(nums) taking an array of numbers and move all 0’s to the end of it while maintaining the relative order of the non-zero elements.  For example:
+//Question 11. Write the function moveZeros(nums) taking an array of numbers and move all 0’s to the end of it while maintaining the relative order of the non-zero elements.  For example:
 //moveZeros([0,1,0,3,12]) ======> [1,3,12,0,0]
 //moveZeros([1,2,0,0,2,312,33,0,0]) ======> [1,2,2,312,33,0,0,0,0]
 //moveZeros([0,0,0]) ======> [0,0,0]
 //moveZeros([1,2,312,11,2]) =======> [1,2,312,11,2]
-function moveZeros(nums) {
+
+  function moveZeros(nums) {
     // count number of 0s
     var counter = 0;
   
@@ -227,7 +231,7 @@ function moveZeros(nums) {
     return solution;
   }
   
-  console.log(moveZeros([1,0,21,4,0,0,4]));
+  // console.log(moveZeros([1,0,21,4,0,0,4]));
 
 
 //Question 12 Create an average(nums) function that calculates the average of an array of numbers.
